@@ -1,10 +1,10 @@
-function x(n) {
-  const c = n;
+function x() {
+  const c = 3;
 
   function y() {
     console.log(c);
   }
   return y();
 }
-x(3);
-console.log(x());
+x();
+console.log(x);

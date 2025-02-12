@@ -1,21 +1,20 @@
-var createCounter = function(init) {
-    var incr = init;
-    
-    return function increment(){
-        return ++incr;
-    } 
+var createCounter = function (init) {
+  let count = init;
 
-    return function decrement(){
-        return --incr;
-    }
-    
-    return function reset(){
-        return incr = incr;
-    }
+  return {
+    increment: function () {
+      return ++count;
+    },
+    decrement: function () {
+      return --count;
+    },
+    reset: function () {
+      return (count = init);
+    },
+  };
 };
+const counter = createCounter(5);
 
-
-// let coun = createCounter(6);
-
-
-console.log(createCounter(7).increment());
+counter.increment();
+counter.decrement();
+counter.reset();
