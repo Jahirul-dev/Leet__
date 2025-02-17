@@ -11,3 +11,4 @@ function square(val) {
 }
 
 console.log(multi(add(5, 5)));
+console.log(square(add(5, 5)));
