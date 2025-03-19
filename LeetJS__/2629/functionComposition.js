@@ -16,14 +16,14 @@ function square(val) {
 // compose = (f1, f2) => value => f2( f1(value) );
 // console.log(multi(add(5, 5)));
 // console.log(square(add(5, 5)));
-function compositiion(f1, f2){
+function compositiion(f1, f2, f3){
   return function(a,b){
-    return f2(f1(a,b))
+    return  f3(f2(f1(a,b)))
   }
 }
 
 
-let results = compositiion(add, multi)
+let results = compositiion(add, multi, square)
 
 console.log(results(2,3));
 
